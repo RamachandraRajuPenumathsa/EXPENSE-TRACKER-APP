@@ -1,0 +1,68 @@
+.dashboard-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dashboard-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .dashboard-container button {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+  
+  .dashboard-container button:hover {
+    background-color: #45a049;
+  }
+  
+  .dashboard-container input[type="text"],
+  .dashboard-container input[type="number"],
+  .dashboard-container select,
+  .dashboard-container input[type="date"] {
+    width: calc(100% - 12px);
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .dashboard-container ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .dashboard-container ul li {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+  }
+  
+  .dashboard-container ul li button {
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 3px;
+    margin-left: 5px;
+  }
+  
+  .dashboard-container ul li button:hover {
+    background-color: #d32f2f;
+  }
+  
