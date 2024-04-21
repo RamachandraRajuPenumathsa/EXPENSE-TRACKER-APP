@@ -1,19 +1,18 @@
-// SignUp.js
-
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate hook
+import { useNavigate } from 'react-router-dom';
+import './SignUp.css'; // Import the CSS file
 
 function SignUp({ signUp }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState(null);
-  const navigate = useNavigate(); // Initialize the navigate function
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       await signUp(email, password);
-      navigate('/dashboard'); // Redirect to dashboard on successful signup
+      navigate('/dashboard');
     } catch (error) {
       console.error('Error signing up:', error.message);
       setError(error.message);
@@ -21,10 +20,10 @@ function SignUp({ signUp }) {
   };
 
   return (
-    <div>
+    <div className="signup-container">
       <h2>Sign Up</h2>
-      {error && <p>{error}</p>}
-      <form onSubmit={handleSubmit}>
+      {error && <p className="error-message">{error}</p>}
+      <form className="signup-form" onSubmit={handleSubmit}>
         <input
           type="email"
           placeholder="Email"

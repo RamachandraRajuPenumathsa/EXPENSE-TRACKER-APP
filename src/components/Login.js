@@ -1,19 +1,18 @@
-// Login.js
-
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate hook
+import { useNavigate } from 'react-router-dom';
+import './Login.css'; // Import the CSS file
 
 function Login({ signIn }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState(null);
-  const navigate = useNavigate(); // Initialize the navigate function
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       await signIn(email, password);
-      navigate('/dashboard'); // Redirect to dashboard on successful login
+      navigate('/dashboard');
     } catch (error) {
       console.error('Error signing in:', error.message);
       setError(error.message);
@@ -21,10 +20,10 @@ function Login({ signIn }) {
   };
 
   return (
-    <div>
+    <div className="login-container">
       <h2>Login</h2>
-      {error && <p>{error}</p>}
-      <form onSubmit={handleSubmit}>
+      {error && <p className="error-message">{error}</p>}
+      <form className="login-form" onSubmit={handleSubmit}>
         <input
           type="email"
           placeholder="Email"
@@ -41,7 +40,9 @@ function Login({ signIn }) {
         />
         <button type="submit">Login</button>
       </form>
+      <div className="signup-link">
         <a href="./SignUp">SignUp</a>
+      </div>
     </div>
   );
 }
