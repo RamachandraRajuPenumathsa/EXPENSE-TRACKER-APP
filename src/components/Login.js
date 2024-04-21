@@ -41,6 +41,7 @@ function Login({ signIn }) {
         />
         <button type="submit">Login</button>
       </form>
+        <a href="./SignUp">SignUp</a>
     </div>
   );
 }
